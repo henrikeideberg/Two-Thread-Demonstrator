@@ -1,12 +1,25 @@
-﻿<Window x:Class="Two_Thread_Demonstrator.MainWindow"
+﻿<Window x:Name="Two_Thread_Demonstrator" x:Class="Two_Thread_Demonstrator.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Two_Thread_Demonstrator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Two Thread Demonstrator" Height="527.868" Width="1000">
     <Grid>
-        
+        <GroupBox Header="Thread Name" x:Name="grpBoxDisplayThreadName" Margin="10,10,558,0" Height="477" VerticalAlignment="Top">
+            <Grid x:Name="gridDisplayThreadName" HorizontalAlignment="Left" Height="432" Margin="10,10,0,0" VerticalAlignment="Top" Width="375">
+                <Button x:Name="buttonStartDisplayinh" Content="Start Displaying" HorizontalAlignment="Left" Margin="40,390,0,0" VerticalAlignment="Top" Width="100" Click="buttonStartDisplayinh_Click"/>
+                <Button x:Name="buttonStopDisplaying" Content="Stop Diplaying" HorizontalAlignment="Left" Margin="177,390,0,0" VerticalAlignment="Top" Width="100"/>
+                <Canvas x:Name="canvasDisplayThreadName" HorizontalAlignment="Left" Height="357" Margin="10,10,0,0" VerticalAlignment="Top" Width="350"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Triangle Thread" HorizontalAlignment="Left" Height="477" Margin="550,10,0,0" VerticalAlignment="Top" Width="432">
+            <Grid HorizontalAlignment="Left" Height="432" Margin="10,10,0,0" VerticalAlignment="Top" Width="395">
+                <Button x:Name="buttonStartRotate" Content="Start Rotating" HorizontalAlignment="Left" Margin="61,383,0,0" VerticalAlignment="Top" Width="100" Click="buttonStartRotate_Click"/>
+                <Button x:Name="buttonStopRotate" Content="Stop Rotating" HorizontalAlignment="Left" Margin="220,383,0,0" VerticalAlignment="Top" Width="100"/>
+                <Canvas x:Name="canvasRotateTriangle" HorizontalAlignment="Left" Height="359" Margin="10,10,0,0" VerticalAlignment="Top" Width="375"/>
+            </Grid>
+        </GroupBox>
     </Grid>
 </Window>
